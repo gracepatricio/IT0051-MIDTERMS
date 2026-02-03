@@ -582,23 +582,29 @@ section{
   }
 }
 
-.pizzas .box-container{
+.pizzas .box-container{ 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 2.5rem;
 }
 
 .pizzas .box-container .box{
-  padding:0 2.5rem;
+  padding: 0 2.5rem;
   position: relative;
   overflow: hidden;
   text-align: center;
 }
 
+/* ✅ circular + uniform pizza images */
 .pizzas .box-container .box img{
-  height: 29rem;
+  width: 22rem;
+  height: 22rem;
+  object-fit: cover;     /* keeps image from stretching */
+  border-radius: 50%;    /* makes it circular */
+  border: .4rem solid #eee;
 }
 
+/* hover zoom still works */
 .pizzas .box-container .box:hover img{
   transform: scale(1.1);
 }
