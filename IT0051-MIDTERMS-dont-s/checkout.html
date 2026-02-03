@@ -112,44 +112,74 @@
                     <form id="deliveryForm">
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <label class="form-label">Full Name *</label>
-                                <input type="text" class="form-control" id="fullName" required>
+                                <div class="row align-items-center">
+                                    <label for="fullName" class="col-sm-4 col-form-label">Full Name *</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="fullName" required>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label class="form-label">Phone Number *</label>
-                                <input type="tel" class="form-control" id="phone" required>
+                                <div class="row align-items-center">
+                                    <label for="phone" class="col-sm-4 col-form-label">Phone Number *</label>
+                                    <div class="col-sm-8">
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Email Address *</label>
-                            <input type="email" class="form-control" id="email" required>
+
+                        <div class="row mb-3 align-items-center">
+                            <label for="email" class="col-sm-4 col-form-label">Email Address *</label>
+                            <div class="col-sm-8">
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Delivery Address *</label>
-                            <textarea class="form-control" id="address" rows="3" required></textarea>
+
+                        <div class="row mb-3 align-items-start">
+                            <label for="address" class="col-sm-4 col-form-label">Delivery Address *</label>
+                            <div class="col-sm-8">
+                                <textarea class="form-control" id="address" rows="3" required></textarea>
+                            </div>
                         </div>
+
                         <div class="row">
                             <div class="col-md-4 mb-3">
-                                <label class="form-label">City *</label>
-                                <select class="form-control" id="city" required>
-                                    <option value="">Select City</option>
-                                    <option value="Ahmedabad">Ahmedabad</option>
-                                    <option value="Mumbai">Mumbai</option>
-                                    <option value="Delhi">Delhi</option>
-                                </select>
+                                <div class="row align-items-center">
+                                    <label for="city" class="col-sm-4 col-form-label">City *</label>
+                                    <div class="col-sm-8">
+                                        <select class="form-control" id="city" required>
+                                            <option value="">Select City</option>
+                                            <option value="Ahmedabad">Ahmedabad</option>
+                                            <option value="Mumbai">Mumbai</option>
+                                            <option value="Delhi">Delhi</option>
+                                        </select>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-4 mb-3">
-                                <label class="form-label">Pincode *</label>
-                                <input type="text" class="form-control" id="pincode" required>
+                                <div class="row align-items-center">
+                                    <label for="pincode" class="col-sm-4 col-form-label">Pincode *</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="pincode" required>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-4 mb-3">
-                                <label class="form-label">Landmark</label>
-                                <input type="text" class="form-control" id="landmark">
+                                <div class="row align-items-center">
+                                    <label for="landmark" class="col-sm-4 col-form-label">Landmark</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="landmark">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label">Special Instructions</label>
-                            <textarea class="form-control" id="instructions" rows="2" placeholder="Any special delivery instructions..."></textarea>
+
+                        <div class="row mb-3 align-items-start">
+                            <label for="instructions" class="col-sm-4 col-form-label">Special Instructions</label>
+                            <div class="col-sm-8">
+                                <textarea class="form-control" id="instructions" rows="2" placeholder="Any special delivery instructions..."></textarea>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -160,30 +190,181 @@
                     
                     <div class="payment-method" data-method="cod">
                         <input type="radio" name="payment" id="cod" value="cod" checked>
-                        <label for="cod" style="cursor: pointer; flex: 1;">
-                            <i class="fas fa-money-bill-wave"></i>
-                            <strong>Cash on Delivery</strong>
-                            <p class="mb-0 text-muted">Pay when you receive your order</p>
+                        <label for="cod" style="cursor: pointer; flex: 1; display:flex; align-items:center;">
+                            <i class="fas fa-money-bill-wave" style="font-size:24px; margin-right:10px"></i>
+                            <div>
+                                <strong>Cash on Delivery</strong>
+                                <p class="mb-0 text-muted" style="font-size:0.9rem">Pay when you receive your order</p>
+                            </div>
                         </label>
                     </div>
 
-                    <div class="payment-method" data-method="card">
-                        <input type="radio" name="payment" id="card" value="card">
-                        <label for="card" style="cursor: pointer; flex: 1;">
-                            <i class="fas fa-credit-card"></i>
-                            <strong>Credit/Debit Card</strong>
-                            <p class="mb-0 text-muted">Visa, Mastercard, Rupay accepted</p>
+                    <div class="payment-method" data-method="mastercard">
+                        <input type="radio" name="payment" id="mastercard" value="mastercard">
+                        <label for="mastercard" style="cursor: pointer; flex: 1; display:flex; align-items:center;">
+                            <i class="fab fa-cc-mastercard" style="font-size:24px; margin-right:10px"></i>
+                            <div>
+                                <strong>MasterCard</strong>
+                                <p class="mb-0 text-muted" style="font-size:0.9rem">Debit/Credit MasterCard</p>
+                            </div>
                         </label>
                     </div>
 
-                    <div class="payment-method" data-method="wallet">
-                        <input type="radio" name="payment" id="wallet" value="wallet">
-                        <label for="wallet" style="cursor: pointer; flex: 1;">
-                            <i class="fas fa-wallet"></i>
-                            <strong>Digital Wallet</strong>
-                            <p class="mb-0 text-muted">Gcash, Gotyme, PayPal</p>
+                    <div class="payment-method" data-method="bdo">
+                        <input type="radio" name="payment" id="bdo" value="bdo">
+                        <label for="bdo" style="cursor: pointer; flex: 1; display:flex; align-items:center;">
+                            <i class="fas fa-university" style="font-size:24px; margin-right:10px"></i>
+                            <div>
+                                <strong>BDO</strong>
+                                <p class="mb-0 text-muted" style="font-size:0.9rem">Bank transfer / debit</p>
+                            </div>
                         </label>
                     </div>
+
+                    <div class="payment-method" data-method="visa">
+                        <input type="radio" name="payment" id="visa" value="visa">
+                        <label for="visa" style="cursor: pointer; flex: 1; display:flex; align-items:center;">
+                            <i class="fab fa-cc-visa" style="font-size:24px; margin-right:10px"></i>
+                            <div>
+                                <strong>Visa</strong>
+                                <p class="mb-0 text-muted" style="font-size:0.9rem">Debit/Credit Visa</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="payment-method" data-method="gcash">
+                        <input type="radio" name="payment" id="gcash" value="gcash">
+                        <label for="gcash" style="cursor: pointer; flex: 1; display:flex; align-items:center;">
+                            <i class="fas fa-wallet" style="font-size:24px; margin-right:10px"></i>
+                            <div>
+                                <strong>GCash</strong>
+                                <p class="mb-0 text-muted" style="font-size:0.9rem">Mobile wallet</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="payment-method" data-method="paymaya">
+                        <input type="radio" name="payment" id="paymaya" value="paymaya">
+                        <label for="paymaya" style="cursor: pointer; flex: 1; display:flex; align-items:center;">
+                            <i class="fas fa-mobile-alt" style="font-size:24px; margin-right:10px"></i>
+                            <div>
+                                <strong>PayMaya</strong>
+                                <p class="mb-0 text-muted" style="font-size:0.9rem">Mobile wallet</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- Bank options requested by user -->
+                    <div class="payment-method" data-method="bpi">
+                        <input type="radio" name="payment" id="bpi" value="bpi">
+                        <label for="bpi" style="cursor: pointer; flex: 1; display:flex; align-items:center;">
+                            <i class="fas fa-university" style="font-size:24px; margin-right:10px"></i>
+                            <div>
+                                <strong>BPI</strong>
+                                <p class="mb-0 text-muted" style="font-size:0.9rem">Bank transfer</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="payment-method" data-method="metrobank">
+                        <input type="radio" name="payment" id="metrobank" value="metrobank">
+                        <label for="metrobank" style="cursor: pointer; flex: 1; display:flex; align-items:center;">
+                            <i class="fas fa-university" style="font-size:24px; margin-right:10px"></i>
+                            <div>
+                                <strong>MetroBank</strong>
+                                <p class="mb-0 text-muted" style="font-size:0.9rem">Bank transfer</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="payment-method" data-method="landbank">
+                        <input type="radio" name="payment" id="landbank" value="landbank">
+                        <label for="landbank" style="cursor: pointer; flex: 1; display:flex; align-items:center;">
+                            <i class="fas fa-university" style="font-size:24px; margin-right:10px"></i>
+                            <div>
+                                <strong>Landbank</strong>
+                                <p class="mb-0 text-muted" style="font-size:0.9rem">Bank transfer</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="payment-method" data-method="pnb">
+                        <input type="radio" name="payment" id="pnb" value="pnb">
+                        <label for="pnb" style="cursor: pointer; flex: 1; display:flex; align-items:center;">
+                            <i class="fas fa-university" style="font-size:24px; margin-right:10px"></i>
+                            <div>
+                                <strong>PNB</strong>
+                                <p class="mb-0 text-muted" style="font-size:0.9rem">Bank transfer</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="payment-method" data-method="chinabank">
+                        <input type="radio" name="payment" id="chinabank" value="chinabank">
+                        <label for="chinabank" style="cursor: pointer; flex: 1; display:flex; align-items:center;">
+                            <i class="fas fa-university" style="font-size:24px; margin-right:10px"></i>
+                            <div>
+                                <strong>ChinaBank</strong>
+                                <p class="mb-0 text-muted" style="font-size:0.9rem">Bank transfer</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="payment-method" data-method="unionbank">
+                        <input type="radio" name="payment" id="unionbank" value="unionbank">
+                        <label for="unionbank" style="cursor: pointer; flex: 1; display:flex; align-items:center;">
+                            <i class="fas fa-university" style="font-size:24px; margin-right:10px"></i>
+                            <div>
+                                <strong>UnionBank</strong>
+                                <p class="mb-0 text-muted" style="font-size:0.9rem">Bank transfer</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="payment-method" data-method="rcbc">
+                        <input type="radio" name="payment" id="rcbc" value="rcbc">
+                        <label for="rcbc" style="cursor: pointer; flex: 1; display:flex; align-items:center;">
+                            <i class="fas fa-university" style="font-size:24px; margin-right:10px"></i>
+                            <div>
+                                <strong>RCBC</strong>
+                                <p class="mb-0 text-muted" style="font-size:0.9rem">Bank transfer</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="payment-method" data-method="eastwest">
+                        <input type="radio" name="payment" id="eastwest" value="eastwest">
+                        <label for="eastwest" style="cursor: pointer; flex: 1; display:flex; align-items:center;">
+                            <i class="fas fa-university" style="font-size:24px; margin-right:10px"></i>
+                            <div>
+                                <strong>EastWest</strong>
+                                <p class="mb-0 text-muted" style="font-size:0.9rem">Bank transfer</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const methods = document.querySelectorAll('.payment-method');
+                            function updateSelected() {
+                                methods.forEach(m => {
+                                    const input = m.querySelector('input[type="radio"]');
+                                    if (input.checked) m.classList.add('selected'); else m.classList.remove('selected');
+                                });
+                            }
+                            methods.forEach(m => {
+                                m.addEventListener('click', function(e) {
+                                    // avoid double toggling if clicking directly on input
+                                    const input = m.querySelector('input[type="radio"]');
+                                    input.checked = true;
+                                    updateSelected();
+                                });
+                                const input = m.querySelector('input[type="radio"]');
+                                input.addEventListener('change', updateSelected);
+                            });
+                            updateSelected();
+                        });
+                    </script>
                 </div>
             </div>
 
